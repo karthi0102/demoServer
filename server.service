@@ -1,12 +1,13 @@
 [Unit]
 Description=My server
-After=network.target  # Ensure network is up before starting
+After=network.target
 
 [Service]
 ExecStart=/home/ubuntu/server/demoServer/index.js
-WorkingDirectory=/path/to/working-directory  # Optional, the directory where the script runs
-Restart=always  # Automatically restart the service on failure
-User=root  # The user to run the service as
+WorkingDirectory=/home/ubuntu/server/demoServer 
+Restart=always 
+User=ubuntu
+Environment=NODE_ENV=production
 
 [Install]
-WantedBy=multi-user.target  # Ensure the service starts in multi-user mode (standard mode)
+WantedBy=multi-user.target
