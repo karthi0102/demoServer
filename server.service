@@ -3,8 +3,8 @@ Description=My server
 After=network.target
 
 [Service]
-ExecStart=/home/ubuntu/server/demoServer/index.js
-WorkingDirectory=/home/ubuntu/server/demoServer 
+ExecStart=/home/ubuntu/demoServer/index.js
+WorkingDirectory=/home/ubuntu/demoServer
 Restart=always 
 User=ubuntu
 Environment=NODE_ENV=production
